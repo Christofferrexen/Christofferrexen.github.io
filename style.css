@@ -1,9 +1,9 @@
 :root {
-  --ink: #1b1f23;
+  --ink: #ffffff;
   --ink-soft: #4a5258;
   --line: #dde2e5;
   --accent: #2f5d50;
-  --paper: #fdfdfb;
+  --paper: #000000;
   --max-w: 760px;
 }
 
