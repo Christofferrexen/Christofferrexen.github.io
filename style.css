@@ -1,9 +1,11 @@
 :root {
-  --ink: #ffffff;
-  --ink-soft: #4a5258;
-  --line: #dde2e5;
-  --accent: #2f5d50;
-  --paper: #000000;
+  color-scheme: dark;
+  --paper: #1a1f24;      /* page background */
+  --surface: #222a31;    /* highlighted job card */
+  --ink: #e4e7ea;        /* main text */
+  --ink-soft: #aab3bb;   /* secondary text */
+  --line: #36404a;       /* dividers */
+  --accent: #8cc3ad;     /* headings, role, links */
   --max-w: 760px;
 }
 
@@ -15,7 +17,7 @@ body {
   color: var(--ink);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
-  line-height: 1.55;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -31,7 +33,7 @@ body {
   align-items: flex-end;
   flex-wrap: wrap;
   gap: 20px;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 2px solid var(--line);
   padding-bottom: 20px;
   margin-bottom: 36px;
 }
@@ -42,6 +44,7 @@ h1 {
   font-size: 2.1rem;
   margin: 0 0 4px;
   letter-spacing: -0.01em;
+  color: var(--ink);
 }
 
 .role {
@@ -62,7 +65,9 @@ h1 {
 
 .contact li { margin-bottom: 3px; }
 .contact a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--line); }
-.contact a:hover { color: var(--accent); border-color: var(--accent); }
+.contact a:hover,
+.contact a:focus-visible { color: var(--accent); border-color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .summary p {
   font-size: 1.02rem;
@@ -98,6 +103,7 @@ h2 {
   margin: 0;
   font-size: 1.05rem;
   font-weight: 600;
+  color: var(--ink);
 }
 
 .company {
@@ -130,10 +136,12 @@ h2 {
   font-size: 0.93rem;
 }
 
+.job li::marker { color: var(--accent); }
+
 .job-compact li { font-size: 0.88rem; color: var(--ink-soft); }
 
 .job-primary {
-  background: #f3f5f2;
+  background: var(--surface);
   border-left: 3px solid var(--accent);
   padding: 20px 22px;
   border-radius: 2px;
@@ -149,6 +157,7 @@ h2 {
   margin: 0 0 4px;
   font-size: 0.92rem;
   font-weight: 600;
+  color: var(--ink);
 }
 
 .skills-grid p {
@@ -185,8 +194,22 @@ h2 {
   h1 { font-size: 1.7rem; }
 }
 
+/* Printing / Save as PDF always uses a light, ink-friendly version */
 @media print {
+  :root {
+    color-scheme: light;
+    --paper: #ffffff;
+    --surface: #ffffff;
+    --ink: #1b1f23;
+    --ink-soft: #4a5258;
+    --line: #dde2e5;
+    --accent: #2f5d50;
+  }
   body { font-size: 13px; }
   .page { padding: 20px; max-width: 100%; }
+  .header { border-bottom-color: var(--ink); }
   .job-primary { background: none; border-left: 2px solid #000; }
+  .job, .skills-grid > div, .plain-list li { break-inside: avoid; }
+  .contact a { border: none; }
+  @page { margin: 14mm; }
 }
