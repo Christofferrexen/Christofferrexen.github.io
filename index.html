@@ -4,10 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Christoffer Rexen — Enterprise Architect</title>
-<meta name="description" content="CV — Christoffer Rexen, Enterprise &amp; Solution Architect">
+<meta name="description" content="CV — Christoffer Rexen, Enterprise &amp; Solution Architect in Danish public sector IT">
+<meta property="og:title" content="Christoffer Rexen — Enterprise &amp; Solution Architect">
+<meta property="og:description" content="Enterprise architect aligning business, vendors and technology across Danish public sector IT.">
+<meta property="og:url" content="https://christofferrexen.github.io/">
+<meta property="og:type" content="profile">
+<script>
+  /* Apply saved theme before the page paints, so there is no flash */
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,123 +26,134 @@
 <div class="page">
 
   <header class="header">
-    <div class="header-main">
+    <div class="identity">
       <h1>Christoffer Rexen</h1>
       <p class="role">Enterprise &amp; Solution Architect</p>
     </div>
-    <ul class="contact">
-      <li><a href="mailto:christofferrexen@gmail.com">christofferrexen@gmail.com</a></li>
-      <li><a href="tel:+4531188692">+45 3118 8692</a></li>
-      <li>Hillerød, Denmark</li>
-      <li><a href="https://www.linkedin.com/in/christofferrexen/" target="_blank" rel="noopener">linkedin.com/in/christofferrexen</a></li>
-    </ul>
+    <div class="actions">
+      <button type="button" class="btn" id="print-btn">Download PDF</button>
+      <button type="button" class="btn btn-quiet" id="theme-btn" aria-label="Switch colour theme">Light mode</button>
+    </div>
   </header>
 
-  <section class="summary">
-    <p>Enterprise and solution architect with a decade of experience translating complex business needs into technology architecture and long-term roadmaps across the Danish public and private sector. Currently responsible for architecture and product ownership of a portfolio of shared national support systems at KOMBIT, working across a multi-vendor landscape to align technical direction, integration architecture, and operational stability. Strong track record of acting as the bridge between business stakeholders, development teams, and external suppliers &mdash; facilitating decisions that hold up across large, decentralized organizations.</p>
+  <ul class="contact">
+    <li><a href="mailto:christofferrexen@gmail.com">christofferrexen@gmail.com</a></li>
+    <li><a href="tel:+4531188692">+45 3118 8692</a></li>
+    <li>Hillerød, Denmark</li>
+    <li><a href="https://www.linkedin.com/in/christofferrexen/" target="_blank" rel="noopener">LinkedIn</a></li>
+  </ul>
+
+  <section class="intro">
+    <p class="lead">I align business, vendors and technology across Danish public sector IT.</p>
+    <p>10+ years in enterprise and solution architecture. Currently architect and product owner for shared national systems at KOMBIT, used across Danish municipalities. Known for turning complex stakeholder landscapes into decisions that hold.</p>
+    <ul class="focus" aria-label="Core areas">
+      <li>Enterprise architecture</li>
+      <li>Integration &amp; identity</li>
+      <li>Vendor governance</li>
+      <li>Product ownership</li>
+      <li>Azure &amp; DevOps</li>
+    </ul>
   </section>
 
   <section>
     <h2>Experience</h2>
 
-    <article class="job job-primary">
-      <div class="job-head">
-        <div>
+    <ol class="timeline">
+
+      <li class="entry entry-current">
+        <p class="when">2023 – now</p>
+        <div class="what">
           <h3>Architect &amp; Product Owner</h3>
           <p class="company">KOMBIT A/S</p>
+          <p class="context">Shared national systems for Danish municipalities: Klassifikation, Organisation, Indekserne (Sags-, Dokument- og Ydelsesindeks), På Tværs and the Organisation Synchronization System.</p>
+          <ul>
+            <li>Own the <strong>architecture roadmap and product direction</strong> for the portfolio, balancing business needs, technical constraints and long-term stability</li>
+            <li>Align a <strong>multi-vendor landscape</strong> (Accenture, CGI, IBM, KMD) on integration design, access management and delivery</li>
+            <li>Define integration and identity architecture on <strong>OIO IDWS, WS-Trust and FOCES</strong>, the national standards for secure system-to-system access</li>
+            <li>Run architecture decisions, workshops and governance forums between business owners, suppliers and development teams</li>
+            <li>Turn architectural vision into technical strategy that distributed delivery teams can act on</li>
+            <li>Improve delivery predictability and operational resilience with Agile and DevOps practices</li>
+          </ul>
         </div>
-        <p class="period">Oct 2023 &mdash; Present</p>
-      </div>
-      <p class="job-intro">Architecture and product ownership for a portfolio of shared national support systems used across Danish municipalities, including Klassifikation, Organisation, Indekserne (Sags-, Dokument- og Ydelsesindeks), På Tværs, and the Organisation Synchronization System.</p>
-      <ul>
-        <li>Own the architecture roadmap and product direction across the portfolio, balancing business needs, technical constraints, and long-term operational stability</li>
-        <li>Coordinate and align architecture decisions across a multi-vendor landscape (Accenture, CGI, IBM, KMD), driving consensus on integration design, access management, and delivery</li>
-        <li>Define and maintain integration and identity architecture built on OIO IDWS, WS-Trust, and FOCES certificates &mdash; the national standards for secure system-to-system access in Danish public sector IT</li>
-        <li>Facilitate architecture decisions, workshops, and governance forums between business owners, suppliers, and development teams</li>
-        <li>Translate architectural vision into actionable, sustainable technical strategy for distributed delivery teams</li>
-        <li>Apply Agile and DevOps principles to improve delivery predictability and operational resilience across the portfolio</li>
-      </ul>
-    </article>
+      </li>
 
-    <article class="job">
-      <div class="job-head">
-        <div>
+      <li class="entry">
+        <p class="when">2022 – 2023</p>
+        <div class="what">
           <h3>DevOps Engineer</h3>
           <p class="company">Demant A/S</p>
+          <ul>
+            <li>Cut Azure costs by <strong>~$80,000 per month</strong> through FinOps initiatives</li>
+            <li>Built YAML-based CI/CD pipelines in Azure DevOps across multiple Azure subscriptions</li>
+            <li>Introduced GitHub Flow branching and Prometheus-based infrastructure monitoring</li>
+          </ul>
         </div>
-        <p class="period">Sep 2022 &mdash; Oct 2023</p>
-      </div>
-      <ul>
-        <li>Built YAML-based CI/CD pipelines in Azure DevOps and managed multiple Azure subscriptions</li>
-        <li>Introduced GitHub Flow as branching strategy and Prometheus-based infrastructure monitoring</li>
-        <li>Reduced Azure subscription costs by roughly $80,000/month through FinOps initiatives</li>
-      </ul>
-    </article>
+      </li>
 
-    <article class="job">
-      <div class="job-head">
-        <div>
+      <li class="entry">
+        <p class="when">2020 – 2022</p>
+        <div class="what">
           <h3>Application &amp; Solution Architect / Product Owner</h3>
           <p class="company">NNIT A/S</p>
+          <ul>
+            <li>Linked IT and business for the <strong>national NemLog-in solution</strong> across contract, operations and development</li>
+            <li>Aligned NETS, Digitaliseringsstyrelsen and NNIT at <strong>C-level</strong></li>
+            <li>Wrote solution descriptions, architecture drawings and infrastructure roadmaps</li>
+            <li>Product Owner and SAFe facilitator, owning and prioritising the backlog</li>
+          </ul>
         </div>
-        <p class="period">Oct 2020 &mdash; Sep 2022</p>
-      </div>
-      <ul>
-        <li>Acted as the link between IT and business for the national NemLog-in application, across contract, operations, and development</li>
-        <li>Brokered alignment between NemLog-in developers (NETS), Digitaliseringsstyrelsen, and NNIT at C-level</li>
-        <li>Authored solution descriptions, architecture drawings, and infrastructure roadmaps</li>
-        <li>Facilitated SAFe events and acted as Product Owner, maintaining and prioritizing the backlog</li>
-      </ul>
-    </article>
+      </li>
 
-    <article class="job job-compact">
-      <div class="job-head">
-        <div>
-          <h3>Solution Architect</h3>
-          <p class="company">QualiWare ApS</p>
-        </div>
-        <p class="period">Aug 2017 &mdash; Oct 2020</p>
-      </div>
-      <ul>
-        <li>Coordinated and implemented client business projects, advising on best-practice design, implementation, and integration</li>
-        <li>Migrated customer and internal solutions to Azure Cloud; supported pre-sales, demos, and documentation</li>
-      </ul>
-    </article>
+    </ol>
 
-    <article class="job job-compact">
-      <div class="job-head">
-        <div>
-          <h3>Database &amp; Solution Architect</h3>
-          <p class="company">RTM Insurance Brokers A/S &amp; IT-ShareVision ApS</p>
-        </div>
-        <p class="period">Jan 2014 &mdash; Nov 2017</p>
-      </div>
-      <ul>
-        <li>Responsible for end-to-end IT support, build &amp; run processes, and platform maintenance for 500+ customers</li>
-        <li>Designed, built, and released new IT products; built a CRM system from scratch with reporting and tracking tools</li>
-        <li>Improved wireless network uptime from 85% to 99.99% through configuration and optimization</li>
-      </ul>
-    </article>
+    <details class="earlier">
+      <summary>Earlier roles, 2014 – 2020</summary>
+      <ol class="timeline">
+        <li class="entry">
+          <p class="when">2017 – 2020</p>
+          <div class="what">
+            <h3>Solution Architect</h3>
+            <p class="company">QualiWare ApS</p>
+            <ul>
+              <li>Led client implementation projects and advised on design and integration</li>
+              <li>Migrated customer and internal solutions to Azure; supported pre-sales and demos</li>
+            </ul>
+          </div>
+        </li>
+        <li class="entry">
+          <p class="when">2014 – 2017</p>
+          <div class="what">
+            <h3>Database &amp; Solution Architect</h3>
+            <p class="company">RTM Insurance Brokers A/S &amp; IT-ShareVision ApS</p>
+            <ul>
+              <li>Raised wireless network uptime from <strong>85% to 99.99%</strong></li>
+              <li>Ran IT support, build and run for <strong>500+ customers</strong></li>
+              <li>Built a CRM system from scratch with reporting and tracking</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </details>
   </section>
 
   <section>
     <h2>Core competencies</h2>
     <div class="skills-grid">
       <div>
-        <h4>Architecture &amp; Governance</h4>
-        <p>Enterprise &amp; solution architecture, technology roadmaps, vendor governance, architecture facilitation, TOGAF</p>
+        <h3>Architecture &amp; governance</h3>
+        <p>Enterprise and solution architecture, technology roadmaps, vendor governance, architecture facilitation, TOGAF</p>
       </div>
       <div>
-        <h4>Integration &amp; Identity</h4>
-        <p>OIO IDWS, WS-Trust, FOCES, SAML, OAuth2/OIDC, API &amp; system integration</p>
+        <h3>Integration &amp; identity</h3>
+        <p>OIO IDWS, WS-Trust, FOCES, SAML, OAuth2/OIDC, API and system integration</p>
       </div>
       <div>
-        <h4>Delivery &amp; Agile</h4>
-        <p>Product ownership, SAFe facilitation, Scrum, stakeholder &amp; backlog management</p>
+        <h3>Delivery &amp; agile</h3>
+        <p>Product ownership, SAFe facilitation, Scrum, stakeholder and backlog management</p>
       </div>
       <div>
-        <h4>Cloud &amp; Platform</h4>
-        <p>Azure, AWS &amp; GCP fundamentals, Infrastructure as Code (Terraform), CI/CD, DevOps practices</p>
+        <h3>Cloud &amp; platform</h3>
+        <p>Azure, AWS and GCP fundamentals, Terraform, CI/CD, DevOps practices</p>
       </div>
     </div>
   </section>
@@ -140,24 +162,59 @@
     <div>
       <h2>Certifications</h2>
       <ul class="plain-list">
-        <li>TOGAF Standard, Version 9.2 &mdash; The Open Group</li>
-        <li>SAFe Product Owner/Product Manager &mdash; Scaled Agile</li>
-        <li>SAFe&reg; for Teams &mdash; Scaled Agile</li>
-        <li>Certified ScrumMaster &mdash; TRIFORK Academy</li>
-        <li>AZ-900: Microsoft Azure Fundamentals &mdash; Microsoft</li>
+        <li>TOGAF Standard 9.2 <span>The Open Group</span></li>
+        <li>SAFe Product Owner / Product Manager <span>Scaled Agile</span></li>
+        <li>SAFe for Teams <span>Scaled Agile</span></li>
+        <li>Certified ScrumMaster <span>Trifork Academy</span></li>
+        <li>AZ-900 Azure Fundamentals <span>Microsoft</span></li>
       </ul>
     </div>
     <div>
       <h2>Education</h2>
       <ul class="plain-list">
-        <li>Information Technology, individual classes &mdash; Cphbusiness Søerne</li>
-        <li>Business Academy, Finance &amp; Insurance &mdash; Erhvervsakademiet København Nord</li>
-        <li>HHX &mdash; Hillerød Business School</li>
+        <li>Information Technology, individual classes <span>Cphbusiness Søerne</span></li>
+        <li>Business Academy, Finance &amp; Insurance <span>Erhvervsakademiet København Nord</span></li>
+        <li>HHX <span>Hillerød Business School</span></li>
       </ul>
     </div>
   </section>
 
 </div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var themeBtn = document.getElementById('theme-btn');
+
+    function current() {
+      return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    }
+    function label() {
+      themeBtn.textContent = current() === 'light' ? 'Dark mode' : 'Light mode';
+    }
+    themeBtn.addEventListener('click', function () {
+      var next = current() === 'light' ? 'dark' : 'light';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      label();
+    });
+    label();
+
+    /* PDF: open the earlier roles so they are included, then print */
+    var details = document.querySelectorAll('details');
+    var wasOpen = [];
+    window.addEventListener('beforeprint', function () {
+      wasOpen = Array.prototype.map.call(details, function (d) { return d.open; });
+      details.forEach(function (d) { d.open = true; });
+    });
+    window.addEventListener('afterprint', function () {
+      details.forEach(function (d, i) { d.open = wasOpen[i]; });
+    });
+    document.getElementById('print-btn').addEventListener('click', function () {
+      window.print();
+    });
+  })();
+</script>
 
 </body>
 </html>
