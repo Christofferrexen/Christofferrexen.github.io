@@ -335,3 +335,7 @@ h2 {
   .contact a { border: none; }
   @page { margin: 14mm; }
 }
+
+@media print {
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; }
+}
